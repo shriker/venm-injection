@@ -39,6 +39,7 @@
     "express-flash": "0.0.2",
     "express-session": "^1.16.2",
     "express-validator": "^6.0.1",
+    "express-vue": "^5.10.3",
     "lodash": "^4.17.13",
     "lusca": "^1.6.1",
     "mongoose": "^5.6.0",
@@ -48,9 +49,12 @@
     "pug": "^2.0.4",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.7",
     "winston": "^2.4.2"
   },
   "devDependencies": {
+    "@nuxt/typescript": "^2.8.1",
     "@types/async": "^3.0.0",
     "@types/bcrypt-nodejs": "^0.0.30",
     "@types/bluebird": "^3.5.27",
