@@ -1,5 +1,4 @@
 import express from "express"
-import expressVue from "express-vue"
 import compression from "compression" // compresses requests
 import session from "express-session"
 import bodyParser from "body-parser"
@@ -26,13 +25,6 @@ import * as passportConfig from "./config/passport"
 
 // Create Express server
 const app = express()
-const expressVueOptions = {
-  rootPath: path.join(__dirname, "client/views")
-}
-
-expressVue.use(app, expressVueOptions).then(() => {
-  //the rest of your express routes.
-})
 
 // Connect to MongoDB
 const mongoUrl = MONGODB_URI
@@ -99,6 +91,7 @@ app.use(express.static(path.join(__dirname, "public"), { maxAge: 31557600000 }))
 /**
  * Primary app routes.
  */
+/*
 app.get("/", homeController.index)
 app.get("/login", userController.getLogin)
 app.post("/login", userController.postLogin)
@@ -131,12 +124,12 @@ app.get(
   "/account/unlink/:provider",
   passportConfig.isAuthenticated,
   userController.getOauthUnlink
-)
+)*/
 
 /**
  * API examples routes.
  */
-app.get("/api", apiController.getApi)
+// app.get("/api", apiController.getApi)
 
 /**
  * OAuth authentication routes. (Sign in)

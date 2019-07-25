@@ -39,6 +39,7 @@ The full folder structure of this app is explained below:
 | Name | Description |
 | ------------------------ | --------------------------------------------------------------------------------------------- |
 | **.vscode**              | Contains VS Code specific settings                                                            |
+| **client**               | Where the Vue.js client lives                                                                 |
 | **dist**                 | Contains the distributable (or output) from your TypeScript build. This is the code you ship  |
 | **node_modules**         | Contains all your npm dependencies                                                            |
 | **src**                  | Contains your source code that will be compiled to the dist dir                               |
@@ -59,6 +60,7 @@ The full folder structure of this app is explained below:
 | jest.config.js           | Used to configure Jest running tests written in TypeScript                                    |
 | package.json             | File that contains npm dependencies as well as build scripts                                  |
 | tsconfig.json            | Config settings for compiling server code written in TypeScript                               |
+| vue.config.js            | Config settings vue-cli                               |
 
 ### Running scripts
 
