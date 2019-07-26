@@ -12,5 +12,3 @@ cache:
 script:
     - npm run build
     - npm run test
-env:
-    - SESSION_SECRET=X5hqym8t$^BQ2Q7NysRJE2Rxuuka3drA2Eq

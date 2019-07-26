@@ -1,3 +1,4 @@
+import { DefaultRouter, AuthRouter, OpenAPIRouter } from "./controllers/api"
 import express from "express"
 import compression from "compression" // compresses requests
 import session from "express-session"
@@ -66,6 +67,7 @@ app.use(passport.session())
 app.use(flash())
 app.use(lusca.xframe("SAMEORIGIN"))
 app.use(lusca.xssProtection(true))
+
 app.use((req, res, next) => {
   res.locals.user = req.user
   next()
@@ -85,6 +87,9 @@ app.use((req, res, next) => {
   }
   next()
 })
+
+app.use("/", DefaultRouter)
+app.use("/auth", AuthRouter)
 
 app.use(express.static(path.join(__dirname, "public"), { maxAge: 31557600000 }))
 
